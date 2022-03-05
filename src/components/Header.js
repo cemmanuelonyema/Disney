@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-// import { auth, provider } from "../firebase";
+import { auth, provider } from "../firebase";
 
 const Header = () => {
-  //   const handleAuth = () => {
-  //     auth
-  //       .signInWithPopup(provider)
-  //       .then((result) => {
-  //         console.log(result);
-  //       })
-  //       .catch((error) => {
-  //         alert(error.message);
-  //       });
-  //   };
+  const handleAuth = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <Nav>
       {" "}
@@ -63,7 +63,7 @@ const Header = () => {
           </li>
         </ul>
       </Menu>
-      <LoginBtn>Login</LoginBtn>
+      <LoginBtn onClick={handleAuth}>Login</LoginBtn>
     </Nav>
   );
 };

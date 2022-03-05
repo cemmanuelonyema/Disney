@@ -1,6 +1,7 @@
 :root {
   --bg-color: #040714;
   --color-white: #f9f9f9;
+  /* --color-white-2: #f9f9f9be; */
   --blue: #0063e5;
   --blue-light: #0483ee;
 
@@ -40,9 +41,18 @@ a {
   text-decoration: none;
   list-style: none;
 }
+
+@media only screen and (max-width: 30em) {
+}
+
+@media only screen and (max-width: 37.5em) {
+}
+
+@media only screen and (max-width: 48em) {
+}
+
+@media only screen and (max-width: 60em) {
+}
 /* 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+@media only screen and (max-width: px) {
 } */

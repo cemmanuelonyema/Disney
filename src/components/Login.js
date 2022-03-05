@@ -1,25 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "./Header";
 //  import PropTypes from 'prop-types'
 
 const Login = () => {
   return (
     <Container>
-      <Nav>
-        {" "}
-        <Logo src="/images/logo.svg" alt="Logo" />
-        <Menu>
-          <ul>
-            <li>
-              <a href="/">
-                <img src="/images/home-icon.svg" alt="home icon" />
-                <span>Home</span>
-              </a>
-            </li>
-          </ul>
-        </Menu>
-        <LoginBtn>Login</LoginBtn>
-      </Nav>
+      <Header />
+
       <Content>
         <Cta>
           <CtaLogo src="/images/cta-logo-one.svg" />
@@ -49,36 +37,6 @@ const Container = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
 `;
-const Nav = styled.nav`
-  padding: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  //   background-color: rgba(4, 7, 20, 0.55);
-`;
-const Logo = styled.img`
-  width: 8rem;
-`;
-const LoginBtn = styled.a``;
-
-const Menu = styled.div`
-  margin-right: auto;
-  margin: 0 auto 0 3rem;
-
-  a {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-
-    img {
-      min-width: 3rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
 
 const Content = styled.div`
   width: 100%;
@@ -89,6 +47,19 @@ const Content = styled.div`
   padding: 0 4rem;
   justify-content: center;
   align-items: center;
+`;
+
+const Cta = styled.div`
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15rem;
+`;
+const CtaLogo = styled.img``;
+const Description = styled.p`
+  font-size: 1.2rem;
 `;
 
 const SignUp = styled.a`
@@ -104,18 +75,5 @@ const SignUp = styled.a`
   &:hover {
     background-color: var(--blue-light);
   }
-`;
-
-const Cta = styled.div`
-  max-width: 60rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15rem;
-`;
-const CtaLogo = styled.img``;
-const Description = styled.p`
-  font-size: 1.2rem;
 `;
 export default Login;

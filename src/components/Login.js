@@ -1,25 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "./Header";
 //  import PropTypes from 'prop-types'
 
 const Login = () => {
   return (
     <Container>
-      <Nav>
-        {" "}
-        <Logo src="/images/logo.svg" alt="Logo" />
-        <Menu>
-          <ul>
-            <li>
-              <a href="/">
-                <img src="/images/home-icon.svg" alt="home icon" />
-                <span>Home</span>
-              </a>
-            </li>
-          </ul>
-        </Menu>
-        <LoginBtn>Login</LoginBtn>
-      </Nav>
+      <Header />
       <Content>
         <Cta>
           <CtaLogo src="/images/cta-logo-one.svg" />

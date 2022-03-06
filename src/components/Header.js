@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { auth, provider } from "../firebase";
 
@@ -13,6 +12,7 @@ const Header = () => {
         alert(error.message);
       });
   };
+
   return (
     <Nav>
       {" "}
@@ -25,36 +25,35 @@ const Header = () => {
               <span>Home</span>
             </a>
           </li>
-          {/* <li>
-                            <a href="/">
-                                <img src="/images/home-icon.svg" alt="home icon"/>
-                                <span>Home</span>
-                            </a>
-                        </li> */}
+
           <li>
             <a href="/">
               <img src="/images/search-icon.svg" alt="home icon" />
               <span>Search</span>
             </a>
           </li>
+
           <li>
             <a href="/">
               <img src="/images/watchlist-icon.svg" alt="home icon" />
               <span>Watchlist</span>
             </a>
           </li>
+
           <li>
             <a href="/">
               <img src="/images/original-icon.svg" alt="home icon" />
               <span>Originals</span>
             </a>
           </li>
+
           <li>
             <a href="/">
               <img src="/images/movie-icon.svg" alt="home icon" />
               <span>Movies</span>
             </a>
           </li>
+
           <li>
             <a href="/">
               <img src="/images/series-icon.svg" alt="home icon" />
@@ -74,32 +73,20 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   background-color: rgba(4, 7, 20, 0.55);
-  text-transform: uppercase;
 `;
+
 const Logo = styled.img`
   width: 10rem;
 `;
-const LoginBtn = styled.a`
-  border: 1px solid var(--color-white);
-  border-radius: 5px;
-  padding: 1rem;
-  font-weight: bold;
-  transition: 0.3s ease-in-out;
-
-  &:hover {
-    background-color: var(--color-white);
-    color: var(--bg-color);
-  }
-`;
 
 const Menu = styled.div`
-  margin-right: auto;
   margin: 0 auto 0 3rem;
+
   ul {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
   }
-
+  
   li {
     padding: 1rem;
   }
@@ -115,23 +102,50 @@ const Menu = styled.div`
     }
 
     span {
-      font-size: 1.4rem;
-      color: var(--color-white);
+    font-size: 1.4rem;
+    color: var(--color-white);
+}
+`;
 
-      margin-top: 3px;
-      padding: 2px 0;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease-in-out;
+const LoginBtn = styled.a`
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
 
-      &:hover {
-        border-bottom: 2px solid var(--color-white);
-      }
-    }
-  }
-
-  @media (max-width: 60em) {
-    display: none;
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--bg-color);
   }
 `;
 
 export default Header;
+
+/* import React from "react"; */
+
+/* const Header = () => { */
+
+/* return ( */
+
+/* ); */
+/* }; */
+
+/* margin-top: 3px; */
+/* padding: 2px 0; */
+/* border-bottom: 2px solid transparent; */
+/* transition: all 0.3s ease-in-out; */
+
+/* &:hover { */
+/* border-bottom: 2px solid var(--color-white); */
+/* } */
+/* } */
+/* } */
+
+/* @media (max-width: 60em) { */
+/* display: none; */
+/* } */
+/* `; */
+
+/* export default Header; */

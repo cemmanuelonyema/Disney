@@ -1,18 +1,19 @@
-import React from "react";
 import styled from "styled-components";
-// import { auth, provider } from "../firebase";
+import { auth, provider } from "../firebase";
+
+import { signInWithPopup } from "firebase/auth";
 
 const Header = () => {
-  //   const handleAuth = () => {
-  //     auth
-  //       .signInWithPopup(provider)
-  //       .then((result) => {
-  //         console.log(result);
-  //       })
-  //       .catch((error) => {
-  //         alert(error.message);
-  //       });
-  //   };
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
   return (
     <Nav>
       {" "}
@@ -62,7 +63,7 @@ const Header = () => {
           </li>
         </ul>
       </Menu>
-      <LoginBtn>Login</LoginBtn>
+      <LoginBtn onClick={signInWithGoogle}>Login</LoginBtn>
     </Nav>
   );
 };
